@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="img"
+            type="String" />
+
+        <variable
+            name="imageLoader"
+            type="com.android.volley.toolbox.ImageLoader" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="false">
+
+        <com.example.rahulpandey.databindingexample.MyImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            bind:imageLoader="@{imageLoader}"
+            bind:imageUrl="@{img}" />
+
+    </android.support.v7.widget.CardView>
+</layout>
