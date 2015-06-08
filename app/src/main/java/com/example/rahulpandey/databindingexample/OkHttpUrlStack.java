@@ -60,7 +60,7 @@ public class OkHttpUrlStack extends HurlStack {
         }
         File cacheDir = new File(rootCache, DEFAULT_CACHE_DIR);
         if (cacheDir.mkdir()) {
-            Log.w(TAG, "Directory Already exists");
+            Log.w(TAG, "Directory create");
         }
         File outputFile = null;
         try {
